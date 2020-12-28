@@ -1,12 +1,19 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {AddressService} from './shared/services/address.service';
+import createSpyObj = jasmine.createSpyObj;
 
 describe('AppComponent', () => {
   beforeEach(async () => {
+    const addressServiceSpy: any = createSpyObj(['loadLibs']);
+
     await TestBed.configureTestingModule({
       declarations: [
         AppComponent
       ],
+      providers: [
+        {provide: AddressService, useValue: addressServiceSpy}
+      ]
     }).compileComponents();
   });
 
@@ -14,18 +21,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'ng-directory'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('ng-directory');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('ng-directory app is running!');
   });
 });

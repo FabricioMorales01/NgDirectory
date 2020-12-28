@@ -1,0 +1,12 @@
+.container-loader {
+  display: flex;
+  height: calc(100vh - 100px);
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+
+  .card {
+    padding: 25px 10px;
+    text-align: center;
+  }
+}

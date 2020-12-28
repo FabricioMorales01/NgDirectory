@@ -1,11 +1,11 @@
 import { browser, by, element } from 'protractor';
 
-export class AppPage {
+export class DerectoryPage {
   async navigateTo(): Promise<unknown> {
     return browser.get(browser.baseUrl);
   }
 
-  async getTitleText(): Promise<string> {
-    return element(by.css('app-root .content span')).getText();
+  async getTitleView(): Promise<string> {
+    return element(by.css('.view-title')).getText();
   }
 }
