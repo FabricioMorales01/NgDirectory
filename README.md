@@ -5,7 +5,7 @@ Application that allows to manage a large data set, It is achieved using pyodide
 ## Libraries
 
 - pyodide: https://pyodide.readthedocs.io/en/latest/
-- ng prime: https://www.primefaces.org/primeng/
+- primeng: https://www.primefaces.org/primeng/
 - bootstrap: https://getbootstrap.com/
 
 
