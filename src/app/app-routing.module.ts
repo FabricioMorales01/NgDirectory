@@ -5,11 +5,11 @@ import {LoadComponent} from './load/load.component';
 import {WorkerGuard} from './shared/guards/worker.guard';
 
 const routes: Routes = [
-  { path: 'directory',
+  { path: '',
     component: AddressViewerComponent,
     canActivate: [WorkerGuard]},
   { path: 'load', component: LoadComponent },
-  { path: '', pathMatch: 'full', redirectTo: 'directory' }
+  { path: '**', redirectTo: '' }
 
 ];
 

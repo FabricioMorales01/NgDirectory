@@ -2,6 +2,8 @@
 
 Application that allows to manage a large data set, It is achieved using pyodide that enable to frontend to run python script, that is combined with the use of a worker in order to avoid lag in the page.  
 
+_Demo: https://ng-directory.herokuapp.com/_
+
 ## Libraries
 
 - pyodide: https://pyodide.readthedocs.io/en/latest/

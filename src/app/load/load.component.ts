@@ -24,7 +24,7 @@ export class LoadComponent implements OnInit {
     setTimeout(() => {
 
       if (this.addressService.isLoadedLibs()) {
-        this.router.navigate(['directory']);
+        this.router.navigate(['']);
       } else {
         this.initTimeout();
       }
